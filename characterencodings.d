@@ -66,6 +66,7 @@ string convertToUtf8(immutable(ubyte)[] data, string dataCharacterEncoding) {
 			return decodeImpl(data, ISO_8869_1, Windows_1252);
 		case "latin1":
 		case "iso88591":
+		case "usascii":
 			// Why am I putting Windows_1252 here? A lot of
 			// stuff in the wild is mislabeled, so this will
 			// do some good in the Just Works department.
